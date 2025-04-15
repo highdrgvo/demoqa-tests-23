@@ -17,7 +17,7 @@ public class CssXpathExamples {
         $("[id=email]").setValue("1");
         $(by("id", "email")).setValue("1");
         $(byId("email")).setValue("1"); // сразу поиск по id (selenide)
-        $("input#iemail").setValue("1"); // можно с input , можно без него. Результат будет одинаковый
+        $("input#email").setValue("1"); // можно с input , можно без него. Результат будет одинаковый
         $x("//*[@id='email']").setValue("1");
 
         // <input type="email" class="inputtext login_form_input_box" name="email">
