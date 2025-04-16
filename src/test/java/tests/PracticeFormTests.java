@@ -1,16 +1,12 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.*;
-
-import java.io.File;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.by;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.files.DownloadActions.click;
 
 public class PracticeFormTests {
 
@@ -23,7 +19,7 @@ public class PracticeFormTests {
     }
 
     @Test
-    void fillPracticeForm() {
+    void fillPracticeFormTest() {
         open("/automation-practice-form");
 
         executeJavaScript("$('footer').remove();");
@@ -44,7 +40,8 @@ public class PracticeFormTests {
 
         $("#subjectsInput").setValue("Chemistry").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
-        $("#uploadPicture").uploadFile(new File("src/test/java/tests/data/PNG_transparency_demonstration_1.png"));
+        $("#uploadPicture").uploadFromClasspath("PNG_transparency_demonstration_1.png");
+        // $("#uploadPicture").uploadFile(new File("src/test/resources/PNG_transparency_demonstration_1.png"));
         $("#currentAddress").setValue("City centre 1");
         $("#react-select-3-input").setValue("NCR").pressEnter();
         $("#react-select-4-input").setValue("Delhi").pressEnter();
