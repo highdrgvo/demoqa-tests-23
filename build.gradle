@@ -6,9 +6,13 @@ repositories {
     mavenCentral()
 }
 
+compileTestJava {
+    options.encoding = 'UTF-8'; // учитывает все возможные кодировки (в том числе и кириллица)
+}
+
 dependencies {
     testImplementation(
-         "org.junit.jupiter:junit-jupiter:5.12.1",
+         "org.junit.jupiter:junit-jupiter:5.12.1", // библиотека jUnit
          "com.codeborne:selenide:7.8.1",
          "org.slf4j:slf4j-simple:2.0.7"
     )

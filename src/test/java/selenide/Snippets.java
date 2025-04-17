@@ -60,7 +60,7 @@ public class Snippets {
         $(byTagAndText("div", "full text")); // можно искать по тегу с текстом (полный текст)
         $(withTagAndText("div", "ull text")); // часть текста
 
-        $("").parent(); // cssSelector только можно двигаться вниз по дереву. Родительский элемент
+        $("[data-testid=results-list]").parent(); // cssSelector только можно двигаться вниз по дереву. Родительский элемент
         $("").sibling(1); // это поиск вниз по дереву (счет с 0 начинается)
         $("").preceding(1); // это поиск вверх
         $("").closest("div"); // Мы ищем предка, который имеет класс div
@@ -68,6 +68,10 @@ public class Snippets {
         $("div:last-child"); // поиск последнего ребенка (в данном случае последний div)
 
         $("div").$("h1").find(byText("abc")).click(); // находим div, внутри него h1, внутри h1 текст abc
+
+        $$(".prc-Link-Link-85e08").findBy(Condition.text("selenide/selenide")).click(); // $$ - Находит все элементы с классом "prc-Link-Link-85e08" // Из найденной коллекции выбирает первый элемент, содержащий точный текст "selenide/selenide" ;
+        // возвращает первый подходящий элемент (или ошибку). Condition.text() используется для проверки текста элемента. Condition.text() - ближе к Selenide, find(byText - ближе к Selenium
+
         // very optional
         $(byAttribute("abc", "x")).click();
         $("[abc=x]").click(); // такой поиск по id уже делал
