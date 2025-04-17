@@ -20,7 +20,8 @@ public class BestContributorToSelenideTest {
         open("https://github.com/selenide/selenide");
 
         // Навести мышку на первого человека
-        $("div.Layout-sidebar").$(byText("Contributors")).closest("h2").sibling(0).$$("li").first().hover();   // closest("h2") - поднимаемся наверх до первого h2, который удовлетворяет условию
+        $("div.Layout-sidebar").$(byText("Contributors")).closest("h2").sibling(0).$$("li").first().hover();   // div.Layout0sidebar - это мы обращаемся к классу в диве.
+        // closest("h2") - поднимаемся наверх до первого h2, который удовлетворяет условию
         // sibling - ближайший к h2 класс ul (index = 0) , ищем li (все li с помощью $$), и нам нужен первый элемент (first()), hover() - навести мышку
 
         // Убедиться, что там Андрей Солнцев
