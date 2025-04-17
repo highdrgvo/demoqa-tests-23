@@ -22,7 +22,7 @@ public class CodeJunit5ExistTest {
     }
 
     @Test
-    void checkCodeJunit5OnPageSoftAssertions() {
+    void checkCodeJunit5OnPageSoftAssertionsTest() {
 
 
         // Открыть страницу Selenide в Github
@@ -51,6 +51,5 @@ public class CodeJunit5ExistTest {
                 "  }\n" +
                 "}"));
 
-        sleep(5000);
     }
 }
