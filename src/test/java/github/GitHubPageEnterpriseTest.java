@@ -22,8 +22,5 @@ public class GitHubPageEnterpriseTest {
 
         $("#hero-section-brand-heading").shouldBe(visible).shouldHave(Condition.text("The AI-powered developer platform"));
 
-
-        sleep(5000);
-
     }
 }
