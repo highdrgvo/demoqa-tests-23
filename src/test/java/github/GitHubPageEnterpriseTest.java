@@ -17,9 +17,9 @@ public class GitHubPageEnterpriseTest {
         open("https://github.com/");
         Configuration.browserSize="1920x1080";
 
-        $(byText("Solutions")).hover();
-        $(byText("Enterprises")).click();
-
+        $(".HeaderMenu-nav").$(byText("Solutions")).hover();
+        //(byText("Solutions")).hover();
+        $("a[href='https://github.com/enterprise']").click();
         $("#hero-section-brand-heading").shouldBe(visible).shouldHave(Condition.text("The AI-powered developer platform"));
 
     }

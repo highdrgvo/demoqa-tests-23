@@ -179,6 +179,8 @@ public class Snippets {
         $("div", 1).click(); // same as previous
         $$("div").findBy(text("123")).click(); //  finds first, where text 123 exists.
 
+        $("a[href='https://github.com/enterprise']").click(); // ищет на странице HTML-элемент <a> (гиперссылка), у которого атрибут href в точности равен "https://github.com/enterprise"
+
         // assertions
         $$("").shouldHave(size(0));
         $$("").shouldBe(CollectionCondition.empty); // the same
